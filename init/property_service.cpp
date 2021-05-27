@@ -1411,12 +1411,11 @@ static void ProcessBootconfig() {
 }
 
 static void SetSafetyNetProps() {
-
     InitPropertySet("ro.boot.flash.locked", "1");
     InitPropertySet("ro.boot.vbmeta.device_state", "locked");
     InitPropertySet("ro.boot.verifiedbootstate", "green");
     InitPropertySet("ro.boot.veritymode", "enforcing");
-
+    InitPropertySet("ro.build.tags", "release-keys");
 }
 
 void PropertyInit() {
